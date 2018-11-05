@@ -32,3 +32,10 @@ Form::extend('editor', \App\Admin\Extensions\Form\WangEditor::class);
 
 //Column::extend('qrcode', \App\Admin\Extensions\Column\Qrcode::class);
 //Column::extend('urlWrapper', \App\Admin\Extensions\Column\UrlWrapper::class);
+//Column::extend('expand', \App\Admin\Extensions\Column\ExpandRow::class);
+//Column::extend('linkLabel', \App\Admin\Extensions\Column\LinkLabel::class);
+Column::extend('default', \App\Admin\Extensions\Column\DefaultValue::class);
+
+Form::forget(['multipleFile', 'multipleImage']);
+Form::extend('multipleFile', \App\Admin\Extensions\Form\MultipleFile\MultipleFile::class);
+Form::extend('multipleImage', \App\Admin\Extensions\Form\MultipleFile\MultipleImage::class);
