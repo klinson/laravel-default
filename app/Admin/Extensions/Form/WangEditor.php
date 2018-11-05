@@ -22,7 +22,7 @@ class WangEditor extends Field
         //上传url
         $uploadServer = '/admin/files/editor';
         $token = csrf_token();
-        
+
         $this->script = <<<EOT
 var E = window.wangEditor
 var editor = new E('#{$this->id}');
